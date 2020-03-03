@@ -7,20 +7,9 @@ const router = express.Router();
 
 router.post('/', async (req, res) => {
   try {
-    const { name, email, password } = req.body;
-    const customerId = await controller.createCustomer(name, email, password);
+    const { name, email } = req.body;
+    const customerId = await controller.createCustomer(name, email);
     res.status(201).json({ customerId });
-  } catch (error) {
-    log(error);
-    res.status(400).end('error');
-  }
-});
-
-router.delete('/', async (req, res) => {
-  try {
-    const { customerId } = req.body;
-    const deletedCustomerId = await controller.deleteCustomer(customerId);
-    res.status(202).json({ customerId: deletedCustomerId });
   } catch (error) {
     log(error);
     res.status(400).end('error');

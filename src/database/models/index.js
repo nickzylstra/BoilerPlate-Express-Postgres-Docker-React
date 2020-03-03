@@ -1,7 +1,6 @@
 const log = require('fancy-log');
 const { pool } = require('../index');
 const customers = require('./customers');
-const certificates = require('./certificates');
 
 async function testDb() {
   const res = await pool.query('SELECT NOW()');
@@ -11,5 +10,4 @@ async function testDb() {
 module.exports = {
   testDb,
   customers,
-  certificates,
 };

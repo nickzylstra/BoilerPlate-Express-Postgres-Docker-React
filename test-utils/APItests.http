@@ -9,66 +9,8 @@ content-type: application/json
 {
     "name": "sample",
     "email": "bob1@business.com",
-    "password": "supersecret"
 }
 
 # sample response body: {"customerId":4}
-
-###
-DELETE http://localhost:3000/customers
-content-type: application/json
-
-{
-    "customerId": 4
-}
-
-# sample response body: {"customerId":4}
-
-
-###
-POST http://localhost:3000/certificates
-content-type: application/json
-
-{
-    "customerId": 5,
-    "isActive": true,
-    "certPrivateKey": "base64encodedstrPrivtKey",
-    "certBody": "base64encodedstrBody"
-}
-
-# sample response body: {"certificateId":4}
-
-
-###
-GET http://localhost:3000/certificates?customerId=5
-
-# sample response body: {"certificates":[{"certificateId":4,"isActive":true,"body":"base64encodedstrBody","privateKey":"base64encodedstrPrivtKey"}]}
-
-
-###
-PUT http://localhost:3000/certificates
-content-type: application/json
-
-{
-    "certificateId": 4,
-    "isActive": false
-}
-
-# sample response body: {"certificateId":4}
-# if request isActive value is the same as current state, response certificateId value will be null
-
-
-###
-PUT http://localhost:3000/certificates
-content-type: application/json
-
-{
-    "certificateId": 4,
-    "isActive": true,
-    "webhookURL": "http://www.test.com"
-}
-
-# sample response body: {"certificateId":4}
-
 
 ###

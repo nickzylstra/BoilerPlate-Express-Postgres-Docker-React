@@ -1,0 +1,2 @@
+DROP TABLE customers CASCADE;
+DROP TABLE certificates CASCADE;

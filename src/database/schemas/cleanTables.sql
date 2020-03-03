@@ -1,0 +1,2 @@
+TRUNCATE TABLE customers CASCADE;
+TRUNCATE TABLE certificates CASCADE;

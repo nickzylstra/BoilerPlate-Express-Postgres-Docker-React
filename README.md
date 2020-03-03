@@ -1,8 +1,13 @@
-# Certificate Manager API
+# Boilerplate
+- Express
+- PostgreSQL
+- React
+- Docker
+- Jest
 
 ## Setup
 
-### To start API server at 'localhost:3000': 
+### To start server at 'localhost:3000': 
 - ensure docker is running
 - clone repo to local machine
 - run the following command from repo directory:
@@ -19,7 +24,7 @@ docker-compose down
 
 ### Route descriptions:
 - Examples API calls here: [endpoints](./test-utils/APItests.http)
-- The linked descriptions are manual tests most efficiently run in VS Code using the 'REST Client' extension.  They could also be ported to CURL using the examples as starting points.
+- The linked descriptions are manual tests most efficiently run in VS Code using the 'REST Client' extension.  They could also be ported to other testing programs using the examples as starting points.
 
 
 ### To run automated tests: 

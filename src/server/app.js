@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const cors = require('cors');
 const rootRouter = require('./routes/root');
 const customersRouter = require('./routes/customers');
@@ -8,7 +9,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use('/', rootRouter);
+// app.use('/', rootRouter);
+app.use('/', express.static(path.resolve(__dirname, '..', '..', 'public')));
 app.use('/customers', customersRouter);
 
 module.exports = app;

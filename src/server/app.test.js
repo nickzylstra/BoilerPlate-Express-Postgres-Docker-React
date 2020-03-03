@@ -1,7 +1,7 @@
 const request = require('supertest');
 const app = require('./app');
 const {
-  pool, createTables, cleanTables, dropTables,
+  pool, testDbConn, createTables, cleanTables, dropTables,
 } = require('../database');
 
 describe('app', () => {
@@ -21,7 +21,13 @@ describe('app', () => {
     await pool.end();
   });
 
-  describe('GET / to test db connection', () => {
+  describe('DB conn', () => {
+    test('should connect', async () => {
+      expect(await testDbConn(pool)).toBe(true);
+    });
+  });
+
+  describe('GET /', () => {
     test('should respond with 200', async () => {
       const res = await request(app).get('/');
       expect(res.statusCode).toBe(200);

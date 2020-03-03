@@ -6,9 +6,9 @@ const App = ({ host }) => {
   const [testState, setTestState] = useState(initTestState);
 
   return (
-    <>
+    <div aria-label="app">
       {`this app is running on ${host}`}
-    </>
+    </div>
   );
 };
 

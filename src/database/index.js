@@ -54,6 +54,12 @@ const createPool = () => {
   return pool;
 };
 
+const testDbConn = async (conn) => {
+  const res = await conn.query('SELECT NOW()');
+  log(`db tested at: ${res.rows[0].now}`);
+  return true;
+};
+
 const readSQLSchemaToString = (filename) => {
   const schemaFile = path.resolve(__dirname, 'schemas', filename);
   return fs.readFileSync(schemaFile).toString();
@@ -64,10 +70,10 @@ const createTableIndices = (conn) => conn.query(readSQLSchemaToString('createInd
 const cleanTables = (conn) => conn.query(readSQLSchemaToString('cleanTables.sql'));
 const dropTables = (conn) => conn.query(readSQLSchemaToString('dropTables.sql'));
 
-
 module.exports = {
   createDb,
   pool: createPool(),
+  testDbConn,
   createTables,
   createTableIndices,
   cleanTables,

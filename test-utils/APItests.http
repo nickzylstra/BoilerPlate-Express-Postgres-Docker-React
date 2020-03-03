@@ -8,7 +8,7 @@ content-type: application/json
 
 {
     "name": "sample",
-    "email": "bob1@business.com",
+    "email": "bob1@business.com"
 }
 
 # sample response body: {"customerId":4}

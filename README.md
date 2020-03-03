@@ -16,7 +16,7 @@
 docker-compose up -d
 ```
 
-### To shutdown webserver at 'localhost:3000':
+### To shutdown server at 'localhost:3000':
 - run the following command from repo directory:
 ```
 docker-compose down

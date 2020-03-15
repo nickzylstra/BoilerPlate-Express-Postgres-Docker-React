@@ -6,6 +6,7 @@
   "configurations": [
     {
       "type": "node",
+      "runtimeArgs": ["--require", "reify"],
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": [

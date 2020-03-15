@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  app_server:
+    volumes:
+      - .:/app
+    ports:
+      - '3000:3000'
+    environment:
+      NODE_ENV: development
+    command: npm run start:docker:dev

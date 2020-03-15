@@ -9,15 +9,10 @@ services:
       POSTGRES_DB: app
   app_server:
     build: .
-    volumes:
-      - .:/app
     depends_on:
       - 'postgres_db'
-    ports:
-      - '3000:3000'
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: pass
       POSTGRES_DB: app
       POSTGRES_HOST: postgres_db
-    command: npm run start:docker:dev

@@ -1,6 +1,10 @@
 {
   "name": "nz-boilerplate",
   "version": "1.0.0",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/nickzylstra/BoilerPlate-Express-Postgres-Docker-React.git"
+  },
   "description": "PERN boilerplate",
   "main": "index.js",
   "scripts": {

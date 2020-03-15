@@ -10,10 +10,19 @@
 ### To start server at 'localhost:3000': 
 - ensure docker is running
 - clone repo to local machine
+
+#### Development mode:
 - run the following command from repo directory:
 
 ```
 docker-compose up -d
+```
+
+#### Production mode:
+- run the following command from repo directory:
+
+```
+docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 ```
 
 ### To shutdown server at 'localhost:3000':
